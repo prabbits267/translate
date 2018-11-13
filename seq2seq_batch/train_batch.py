@@ -81,12 +81,39 @@ class TrainBatch():
         # encoder_output: (batch, max_len, hidden) (5,8,64)
         # hidden (1, batch, 64)
         encoder_output, (hidden_state, cell_state) = self.encoder(input_seq, input_len)
-        SOS_index = torch.LongTensor(self.char2index[SOS]).to(self.device)
+        # SOS_index = torch.LongTensor(self.char2index[SOS]).to(self.device)
         # run one by one
+        batch_size = input_seq.size(0)
+        max_len = input_seq.size(1)
+        decoder_output = torch.zeros([batch_size, max_len, self.output_size])
+        # start of sentence
+        decoder_input = torch.new_ones([1, batch_size])
+        output_index = torch.zeros([batch_size, max_len])
+        for i in range(batch_size):
+            output, (hidden_state, cell_state) = self.decoder(decoder_input, (hidden_state, cell_state), encoder_output)
+            decoder_output[i] = output
+            output_index[i] = output.topk(1)[1]
+            decoder_input = target_seq[i]
+
+        decoder_output = decoder_output.view(-1, self.output_size)
+        target_seq = target_seq.view(-1)
+
+        self.encoder_optim.zero_grad()
+        self.decoder_optim.zero_grad()
+
+        loss = self.loss_function(decoder_output, target_seq)
+
+        self.encoder_optim.step()
+        self.decoder_optim.step()
+
+        loss.backward()
+
+        return loss.data[0]
 
 
 train = TrainBatch(100, 64, 5, 0.01, 'general')
 for i, (input, target) in enumerate(train.data_loader):
+
     a = train.step(input, target)
     print('')
 
