@@ -47,7 +47,6 @@ class Attn(nn.Module):
             for i in range(seq_len):
                 energy[i] = torch.dot(hidden.view(-1), encoder_output[i].view(-1))
             return energy
-
         elif self.method == 'general':
             for i in range(seq_len):
                 z = encoder_output[i]
@@ -59,8 +58,6 @@ class Attn(nn.Module):
                 energy_attn = self.attn(torch.cat((hidden[0], encoder_output[i]), 0))
                 energy = self.v.dot(energy_attn)
                 return energy
-
-
 
 
 # attn = Attn('general', 64)

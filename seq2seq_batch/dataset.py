@@ -3,8 +3,8 @@ from torch.utils.data import Dataset, DataLoader
 
 class Seq2SeqDataset(Dataset):
     def __init__(self):
-        self.path = 'data/data.txt'
-        self.x_data, self.y_data, self.len, self.full_text = self.read_data()
+        self.path = '../data/data.txt'
+        self.x_data, self.y_data, self.len, self.full_text, self.vocab = self.read_data()
 
     def __len__(self):
         return self.len
@@ -22,4 +22,4 @@ class Seq2SeqDataset(Dataset):
             if(len(pair) == 2):
                 x_data.append(pair[0])
                 y_data.append(pair[1] + '_')
-        return x_data, y_data, len(full_text.splitlines()), full_text
+        return x_data, y_data, len(full_text.splitlines()), full_text, sorted(set(full_text))
