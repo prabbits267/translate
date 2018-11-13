@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d1ef940-4634-4ed5-a049-656c63974ac6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/translate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/translate.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seq2seq_batch/Decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/seq2seq_batch/Decoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seq2seq_batch/Encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/seq2seq_batch/Encoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seq2seq_batch/attn.py" beforeDir="false" afterPath="$PROJECT_DIR$/seq2seq_batch/attn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seq2seq_batch/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/seq2seq_batch/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seq2seq_batch/train_batch.py" beforeDir="false" afterPath="$PROJECT_DIR$/seq2seq_batch/train_batch.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,40 +23,40 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="32" />
+          <entry key="py" value="42" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="32" />
+          <entry key="Python" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="33" />
-          <entry key="py" value="10800" />
+          <entry key="py" value="11252" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="10833" />
+          <entry key="Python" value="11285" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.40674394">
+    <splitter split-orientation="horizontal" split-proportion="0.48052725">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/train.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1055">
-                  <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
+                <state relative-caret-position="340">
+                  <caret line="62" column="38" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="38" />
                   <folding>
                     <element signature="e#0#12#0" expanded="true" />
                     <marker date="1542012830038" expanded="true" signature="1443:2537" ph="..." />
@@ -73,13 +68,13 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/seq2seq_batch/Encoder.py">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/dataset.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="24" selection-start-line="24" selection-end-line="24" />
+                <state relative-caret-position="160">
+                  <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
                   <folding>
-                    <element signature="e#0#12#0" expanded="true" />
+                    <marker date="1542078178745" expanded="true" signature="255:264" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -97,8 +92,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/seq2seq_batch/Decoder.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret selection-end-line="3" />
+                <state relative-caret-position="94">
+                  <caret line="40" selection-start-line="40" selection-end-line="40" />
                 </state>
               </provider>
             </entry>
@@ -110,13 +105,13 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/seq2seq_batch/train_batch.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="290">
-                  <caret line="83" selection-start-line="83" selection-end-line="83" />
+                <state relative-caret-position="434">
+                  <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
                   <folding>
                     <element signature="e#0#12#0" expanded="true" />
-                    <marker date="1542084068174" expanded="true" signature="217:222" ph="..." />
-                    <marker date="1542084068174" expanded="true" signature="222:1550" ph="..." />
-                    <marker date="1542084068174" expanded="true" signature="2133:2734" ph="..." />
+                    <marker date="1542101655310" expanded="true" signature="227:232" ph="..." />
+                    <marker date="1542101655310" expanded="true" signature="232:1560" ph="..." />
+                    <marker date="1542101655310" expanded="true" signature="2150:2751" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -154,17 +149,17 @@
         <option value="$PROJECT_DIR$/data/data.txt" />
         <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/seq2seq_batch/attn.py" />
-        <option value="$PROJECT_DIR$/seq2seq_batch/Decoder.py" />
         <option value="$PROJECT_DIR$/seq2seq_batch/Encoder.py" />
-        <option value="$PROJECT_DIR$/dataset.py" />
         <option value="$PROJECT_DIR$/seq2seq_batch/dataset.py" />
         <option value="$PROJECT_DIR$/seq2seq_batch/train_batch.py" />
+        <option value="$PROJECT_DIR$/seq2seq_batch/Decoder.py" />
+        <option value="$PROJECT_DIR$/dataset.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-209" />
-    <option name="y" value="4" />
+    <option name="x" value="-48" />
+    <option name="y" value="13" />
     <option name="width" value="1920" />
     <option name="height" value="1047" />
   </component>
@@ -183,16 +178,6 @@
             <path>
               <item name="translate" type="b2602c69:ProjectViewProjectNode" />
               <item name="translate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="translate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="translate" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="translate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="translate" type="462c0819:PsiDirectoryNode" />
-              <item name="seq2seq_batch" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -222,7 +207,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train_batch">
+  <component name="RunManager" selected="Python.train">
     <configuration name="Decoder (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="translate" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -236,27 +221,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seq2seq_batch/Decoder.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Encoder (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="translate" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/seq2seq_batch" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seq2seq_batch/Encoder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -307,6 +271,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="translate" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="train_batch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="translate" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -329,19 +314,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Encoder (1)" />
       <item itemvalue="Python.attn (1)" />
       <item itemvalue="Python.Decoder (1)" />
       <item itemvalue="Python.train_batch" />
       <item itemvalue="Python.dataset" />
+      <item itemvalue="Python.train" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.train" />
+        <item itemvalue="Python.Decoder (1)" />
         <item itemvalue="Python.train_batch" />
         <item itemvalue="Python.dataset" />
-        <item itemvalue="Python.Decoder (1)" />
         <item itemvalue="Python.attn (1)" />
-        <item itemvalue="Python.Encoder (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -361,13 +346,13 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.12065332" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.12065332" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.35969663" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3900325" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.35861322" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -387,14 +372,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/seq2seq_batch/train_batch.py</url>
-          <line>84</line>
-          <option name="timeStamp" value="34" />
+          <url>file://$PROJECT_DIR$/seq2seq_batch/Decoder.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/seq2seq_batch/train_batch.py</url>
-          <line>77</line>
-          <option name="timeStamp" value="35" />
+          <url>file://$PROJECT_DIR$/train.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -442,7 +427,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../phuenv/venv/Lib/site-packages/torch/nn/modules/rnn.py" />
-    <entry file="file://$PROJECT_DIR$/../phuenv/venv/Lib/site-packages/torch/nn/modules/module.py" />
     <entry file="file://$PROJECT_DIR$/../phuenv/venv/Lib/site-packages/torch/nn/_functions/packing.py" />
     <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/1945588053/builtins.py" />
     <entry file="file://$USER_HOME$/venv/phuenv/lib/python3.5/site-packages/torch/nn/modules/module.py" />
@@ -463,13 +447,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Decoder.py">
+    <entry file="file://$PROJECT_DIR$/data/data.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="97">
+          <caret line="145" column="22" selection-start-line="145" selection-start-column="22" selection-end-line="145" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seq2seq_batch/dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phuenv/venv/Lib/site-packages/torch/nn/modules/module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="476" selection-start-line="476" selection-end-line="476" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phuenv/venv/Lib/site-packages/torch/nn/functional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="1109" selection-start-line="1109" selection-end-line="1109" />
         </state>
       </provider>
     </entry>
@@ -480,47 +489,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="70" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="70" />
-          <folding>
-            <marker date="1542078178745" expanded="true" signature="255:264" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="145" column="22" selection-start-line="145" selection-start-column="22" selection-end-line="145" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seq2seq_batch/Decoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1055">
-          <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <marker date="1542012830038" expanded="true" signature="1443:2537" ph="..." />
-            <marker date="1542012830038" expanded="true" signature="2582:2591" ph="..." />
-            <marker date="1542012830038" expanded="true" signature="2786:3079" ph="..." />
-            <marker date="1542012830038" expanded="true" signature="3109:3242" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seq2seq_batch/Encoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="372">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
@@ -528,29 +499,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../phuenv/venv/Lib/site-packages/torch/nn/functional.py">
+    <entry file="file://$PROJECT_DIR$/dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="1109" selection-start-line="1109" selection-end-line="1109" />
+        <state relative-caret-position="160">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <marker date="1542078178745" expanded="true" signature="255:264" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seq2seq_batch/dataset.py">
+    <entry file="file://$PROJECT_DIR$/Decoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state relative-caret-position="460">
+          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seq2seq_batch/train_batch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="434">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
-            <marker date="1542084068174" expanded="true" signature="217:222" ph="..." />
-            <marker date="1542084068174" expanded="true" signature="222:1550" ph="..." />
-            <marker date="1542084068174" expanded="true" signature="2133:2734" ph="..." />
+            <marker date="1542101655310" expanded="true" signature="227:232" ph="..." />
+            <marker date="1542101655310" expanded="true" signature="232:1560" ph="..." />
+            <marker date="1542101655310" expanded="true" signature="2150:2751" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seq2seq_batch/Decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="62" column="38" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <marker date="1542012830038" expanded="true" signature="1443:2537" ph="..." />
+            <marker date="1542012830038" expanded="true" signature="2582:2591" ph="..." />
+            <marker date="1542012830038" expanded="true" signature="2786:3079" ph="..." />
+            <marker date="1542012830038" expanded="true" signature="3109:3242" ph="..." />
           </folding>
         </state>
       </provider>

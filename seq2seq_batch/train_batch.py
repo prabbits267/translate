@@ -7,6 +7,7 @@ from Encoder import Encoder
 from attn import Attn
 from dataset import Seq2SeqDataset
 
+SOS = '_'
 
 class TrainBatch():
     def __init__(self, input_size, hidden_size, batch_size, learning_rate, method, num_layers=1):
@@ -46,7 +47,7 @@ class TrainBatch():
     def create_batch_tensor(self, batch_word, batch_len):
         batch_size = len(batch_word)
         seq_len = max(batch_len)
-        seq_tensor = torch.zeros([batch_size, seq_len]).to(self.device)
+        seq_tensor = torch.zeros([batch_size, seq_len]).long().to(self.device)
         for i in range(batch_size):
             seq_tensor[i, :batch_len[i]] = self.word_to_index(batch_word[i])
         return seq_tensor
@@ -73,15 +74,20 @@ class TrainBatch():
         return char2index, index2char
 
     # on sigle batch ()
+    # encoder_output: (batch, max_len, hidden) (5,8,64)
+    #
     def step(self, input, target):
         input_seq, input_len, target_seq = self.create_batch(input, target)
+        # encoder_output: (batch, max_len, hidden) (5,8,64)
+        # hidden (1, batch, 64)
         encoder_output, (hidden_state, cell_state) = self.encoder(input_seq, input_len)
-        return encoder_output, (hidden_state, cell_state)
+        SOS_index = torch.LongTensor(self.char2index[SOS]).to(self.device)
+        # run one by one
 
 
 train = TrainBatch(100, 64, 5, 0.01, 'general')
 for i, (input, target) in enumerate(train.data_loader):
-    a,b,c = train.step(input, target)
+    a = train.step(input, target)
     print('')
 
 

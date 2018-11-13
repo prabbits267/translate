@@ -26,6 +26,7 @@ class Decoder(nn.Module):
         self.out = nn.Linear(hidden_size, output_size)
         self.softmax = nn.LogSoftmax(dim=1)
     # [batch, max_len], hc_state (1, batch, 64) encoder_output: (batch, max_len, 64)
+    # this train on single sentence
     def forward(self, input, hc_state, encoder_output):
         embedding = self.embedding(input)
         lstm_output, (hidden_state, cell_state) = self.lstm(embedding, hc_state)
@@ -47,16 +48,15 @@ class Decoder(nn.Module):
         output = self.softmax(output)
         return output, (hidden_state.unsqueeze(0), cell_state)
 
+de = Decoder(64, 100, 'general')
+de = de.to(device)
 
-# de = Decoder(64, 100, 'general')
-# de = de.to(device)
-#
-# input = torch.LongTensor([[1,2,4,5], [1,2,4,0], [2,2,3,5]]).to(device)
-# hidden_state = torch.randn([1,3, 64]).to(device)
-# cell_state = torch.randn([1,3, 64]).to(device)
-#
-# encoder_output = torch.randn([3, 5, 64]).to(device)
-# z = de(input, (hidden_state, cell_state), encoder_output)
-#
-# print(z)
-# print(z.size())
+input = torch.LongTensor([[1,2,4,5], [1,2,4,0], [2,2,3,5]]).to(device)
+hidden_state = torch.randn([1,3, 64]).to(device)
+cell_state = torch.randn([1,3, 64]).to(device)
+
+encoder_output = torch.randn([3, 5, 64]).to(device)
+z = de(input, (hidden_state, cell_state), encoder_output)
+
+print(z)
+print(z.size())
