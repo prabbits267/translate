@@ -1,4 +1,5 @@
 import torch
+from torch.autograd import Variable
 from torch.nn import NLLLoss
 from torch.utils.data import DataLoader
 
@@ -64,12 +65,11 @@ class TrainBatch():
         input_seq = self.create_batch_tensor(input_seq, input_len)
         input_len = torch.LongTensor(input_len).to(self.device)
         target_seq = self.create_batch_tensor(target_seq, target_len)
-        return input_seq, input_len, target_seq
+        return Variable(input_seq), Variable(input_len), Variable(target_seq)
 
     def data_index(self):
         char2index = {}
-        char2index['_'] = 1
-        char2index.update({w:i+2 for i, w in enumerate(self.vocab)})
+        char2index.update({w:i for i, w in enumerate(self.vocab)})
         index2char = {w[1]:w[0] for w in char2index.items()}
         return char2index, index2char
 
@@ -89,26 +89,26 @@ class TrainBatch():
         # start of sentence
         decoder_input = torch.tensor((), dtype=torch.long)
         decoder_input = decoder_input.new_ones([batch_size, 1]).to(self.device)
-        output_index = torch.zeros([batch_size, max_len])
+        decoder_input = decoder_input * self.char2index['_']
+        input_feed = torch.zeros([batch_size, max_len])
 
         for i in range(max_len):
             output, (hidden_state, cell_state) = self.decoder(decoder_input, (hidden_state, cell_state), encoder_output)
+            input_feed[:, i] = decoder_input.squeeze(1)
             decoder_input = target_seq[:, i].unsqueeze(1)
-            z = output.topk(1)[1]
-            output_index[:, i] = z
             decoder_output[:, i] = output
-
         decoder_output = decoder_output.view(-1, self.output_size)
         target_seq = target_seq.view(-1)
 
+        loss = self.loss_function(decoder_output, target_seq)
+
         self.encoder_optim.zero_grad()
         self.decoder_optim.zero_grad()
-        loss = self.loss_function(decoder_output, target_seq)
+
+        loss.backward()
 
         self.encoder_optim.step()
         self.decoder_optim.step()
-        loss.backward()
-
         return loss.data[0]
 
 train = TrainBatch(100, 64, 5, 0.01, 'general')

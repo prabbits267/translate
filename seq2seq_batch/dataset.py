@@ -22,4 +22,5 @@ class Seq2SeqDataset(Dataset):
             if(len(pair) == 2):
                 x_data.append(pair[0])
                 y_data.append(pair[1] + '_')
+        full_text += '_'
         return x_data, y_data, len(full_text.splitlines()), full_text, sorted(set(full_text))
