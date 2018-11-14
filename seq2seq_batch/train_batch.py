@@ -68,8 +68,8 @@ class TrainBatch():
 
     def data_index(self):
         char2index = {}
-        char2index['_'] = 0
-        char2index.update({w:i+1 for i, w in enumerate(self.vocab)})
+        char2index['_'] = 1
+        char2index.update({w:i+2 for i, w in enumerate(self.vocab)})
         index2char = {w[1]:w[0] for w in char2index.items()}
         return char2index, index2char
 
@@ -84,38 +84,40 @@ class TrainBatch():
         # SOS_index = torch.LongTensor(self.char2index[SOS]).to(self.device)
         # run one by one
         batch_size = input_seq.size(0)
-        max_len = input_seq.size(1)
-        decoder_output = torch.zeros([batch_size, max_len, self.output_size])
+        max_len = target_seq.size(1)
+        decoder_output = torch.zeros([batch_size, max_len, self.output_size]).to(self.device)
         # start of sentence
-        decoder_input = torch.new_ones([1, batch_size])
+        decoder_input = torch.tensor((), dtype=torch.long)
+        decoder_input = decoder_input.new_ones([batch_size, 1]).to(self.device)
         output_index = torch.zeros([batch_size, max_len])
-        for i in range(batch_size):
+
+        for i in range(max_len):
             output, (hidden_state, cell_state) = self.decoder(decoder_input, (hidden_state, cell_state), encoder_output)
-            decoder_output[i] = output
-            output_index[i] = output.topk(1)[1]
-            decoder_input = target_seq[i]
+            decoder_input = target_seq[:, i].unsqueeze(1)
+            z = output.topk(1)[1]
+            output_index[:, i] = z
+            decoder_output[:, i] = output
 
         decoder_output = decoder_output.view(-1, self.output_size)
         target_seq = target_seq.view(-1)
 
         self.encoder_optim.zero_grad()
         self.decoder_optim.zero_grad()
-
         loss = self.loss_function(decoder_output, target_seq)
 
         self.encoder_optim.step()
         self.decoder_optim.step()
-
         loss.backward()
 
         return loss.data[0]
 
-
 train = TrainBatch(100, 64, 5, 0.01, 'general')
-for i, (input, target) in enumerate(train.data_loader):
-
-    a = train.step(input, target)
-    print('')
+for i in range(10):
+    print('================== ', i)
+    print()
+    for i, (input, target) in enumerate(train.data_loader):
+        loss = train.step(input, target)
+        print(loss)
 
 
 

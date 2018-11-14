@@ -61,8 +61,8 @@ class Attn(nn.Module):
 
 
 # attn = Attn('general', 64)
-# hidden = torch.randn(1, 32, 64)
-# encoder_output = torch.randn(32, 15, 64)
+# hidden = torch.randn(1, 1, 64)
+# encoder_output = torch.randn(1, 15, 64)
 # a = attn(hidden, encoder_output)
 # print(a)
 # print(a.size())

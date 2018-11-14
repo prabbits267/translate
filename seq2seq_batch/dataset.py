@@ -21,5 +21,5 @@ class Seq2SeqDataset(Dataset):
             pair = line.split('\t')
             if(len(pair) == 2):
                 x_data.append(pair[0])
-                y_data.append('_' + pair[1] + '_')
+                y_data.append(pair[1] + '_')
         return x_data, y_data, len(full_text.splitlines()), full_text, sorted(set(full_text))
