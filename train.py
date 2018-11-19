@@ -89,7 +89,7 @@ class Train():
         return input_tensor.to(self.device)
 
     def get_vocab(self):
-        char2ind = {'_':0}
+        char2ind = {'_':1}
         char2ind.update({w:i+1 for i, w in enumerate(self.vocab)})
         ind2char = {w[1]:w[0] for w in char2ind.items()}
         return char2ind, ind2char

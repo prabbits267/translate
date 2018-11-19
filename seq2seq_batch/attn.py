@@ -47,7 +47,6 @@ class Attn(nn.Module):
             for i in range(seq_len):
                 energy[i] = torch.dot(hidden.view(-1), encoder_output[i].view(-1))
             return energy
-
         elif self.method == 'general':
             for i in range(seq_len):
                 z = encoder_output[i]
@@ -61,11 +60,9 @@ class Attn(nn.Module):
                 return energy
 
 
-
-
 # attn = Attn('general', 64)
-# hidden = torch.randn(1, 32, 64)
-# encoder_output = torch.randn(32, 15, 64)
+# hidden = torch.randn(1, 1, 64)
+# encoder_output = torch.randn(1, 15, 64)
 # a = attn(hidden, encoder_output)
 # print(a)
 # print(a.size())
